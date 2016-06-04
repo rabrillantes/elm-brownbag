@@ -92,3 +92,15 @@ Finally lets provide an update function that, for now, does nothing but return t
 update msg model =
   model
 ```
+
+The `Html.App` package has a `beginnerProgram` function which takes exactly these three things and wires them up together. Let's import that `Html.App` package then wire it all together in main:
+
+```
+import Html.App exposing (beginnerProgram)
+
+...
+
+main = beginnerProgram {model = model, view = view, update = update}
+```
+
+We've moved to the elm architecture but our web app still does the same thing. In the next step we will look into making update respond to events/actions and another key feature of elm: static types!
