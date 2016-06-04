@@ -85,3 +85,10 @@ view model =
 main =
   view model
 ```
+
+Finally lets provide an update function that, for now, does nothing but return the same model it gets.
+
+```
+update msg model =
+  model
+```

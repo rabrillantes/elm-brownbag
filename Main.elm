@@ -6,6 +6,9 @@ model =
 view model =
   text model
 
+update msg model =
+  model
+
 main =
   view model
 
