@@ -1,5 +1,8 @@
 import Html exposing (text)
 
-main =
+view =
   text "Hello, World!"
+
+main =
+  view
 

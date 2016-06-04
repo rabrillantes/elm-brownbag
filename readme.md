@@ -62,3 +62,13 @@ The elm architecture can be quickly describes as a model-view-update pattern.
 - **model** is a data structure which represents the current state of the application.
 - **view** is a function that takes a model and returns a representation of it to be rendered (in our case html).
 - **update** is a function which takes an action/event (or in elm we will call a message) and depending on what kind it is returns a new model that represents the changed state.
+
+Let's start refactoring our main function so we get our model-view-update. Rename `main` to `view` as it is currently producing the Html then call `view` from `main`.
+
+```
+view =
+  text "Hello, World!"
+
+main =
+  view
+```
