@@ -72,3 +72,16 @@ view =
 main =
   view
 ```
+
+Our greeting will be the state for our app. Let's rip that out of the view and pass it as an argument to our view function.
+
+```
+model =
+  "Hello, World!"
+
+view model =
+  text model
+
+main =
+  view model
+```

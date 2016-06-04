@@ -1,8 +1,11 @@
 import Html exposing (text)
 
-view =
-  text "Hello, World!"
+model =
+  "Hello, World!"
+
+view model =
+  text model
 
 main =
-  view
+  view model
 
