@@ -52,3 +52,13 @@ And that is it! We can now run the example on elm's reactor -- a development too
 `elm reactor -a 0.0.0.0`
 
 And access the app on port 8000.
+
+## Step 2 - The Elm Architecture
+
+One of elm's key feature is immutability -- all values cannot be modified after it is created. This has the benefit of making functions stateless, avoiding side effects and making programs easier to reason about. So how do we represent a changing web application's state? Enter: The Elm Architecture
+
+The elm architecture can be quickly describes as a model-view-update pattern.
+
+- **model** is a data structure which represents the current state of the application.
+- **view** is a function that takes a model and returns a representation of it to be rendered (in our case html).
+- **update** is a function which takes an action/event (or in elm we will call a message) and depending on what kind it is returns a new model that represents the changed state.
