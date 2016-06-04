@@ -46,3 +46,9 @@ main =
 ```
 
 Elm uses the `=` sign to declare functions. This will execute a single statement, a call to the function `text` to show our message in our app.
+
+And that is it! We can now run the example on elm's reactor -- a development tool that loads, compiles and serves elm programs on the browser. Fire it up with:
+
+`elm reactor -a 0.0.0.0`
+
+And access the app on port 8000.
