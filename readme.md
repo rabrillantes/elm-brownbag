@@ -143,3 +143,21 @@ type Message = Greet String
 ```
 
 We could have placed this anywhere  in the program but it is quite better to put this near our `update` function, as a definition of what tyeps of messages `update` will respond to.
+
+Let's modify the `update` function to use the `Greet` message:
+
+```
+update msg model =
+  case of msg
+    Greet name ->
+      "Hello, " ++ name ++ "!"
+```
+
+To breakdown what is happening here:
+
+- the event calls `update` with a `Message` and the `model`
+- we pattern match on `msg` with the `case` statement
+- we define a single pattern, that is: `msg` is a `Greet` type of message
+- the other argument is bound to the variable `name`
+- which we then concatenate (`++`) to our greeting "Hello"
+- the concatenated `String` is returned, and used as the new `model`
