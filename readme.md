@@ -104,3 +104,21 @@ main = beginnerProgram {model = model, view = view, update = update}
 ```
 
 We've moved to the elm architecture but our web app still does the same thing. In the next step we will look into making update respond to events/actions and another key feature of elm: static types!
+
+## Step 3 - Messages and Types
+
+Our Hello, World! example was nice and all but let's now interact with user input and make our `update` function actually update something. We will add a text input box to our view, and a container div, which we can import from the Html package.
+
+```
+import Html exposing (div, input, text)
+
+...
+
+view model =
+  div [] [
+    text model,
+    div [] [
+      input [] []
+    ]
+  ]
+```

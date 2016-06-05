@@ -1,5 +1,5 @@
 import Html.App exposing (beginnerProgram)
-import Html exposing (text)
+import Html exposing (div, input, text)
 
 --MODEL
 model =
@@ -7,7 +7,12 @@ model =
 
 --VIEW
 view model =
-  text model
+  div [] [
+    text model,
+    div [] [
+      input [] []
+    ]
+  ]
 
 --UPDATE
 update msg model =
