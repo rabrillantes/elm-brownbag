@@ -124,3 +124,22 @@ view model =
 ```
 
 `div` and `input` are also functions which take two arguments: a list of attributes and a list of nodes that they contain. We nest them similar to how we would nest html tags. I must say it translates really well as a HTML Domain Specific Language.
+
+Next we need to also add event handlers. These are available from `Html.Events`, particularly the onInput event is what we want for our text box. This is again a function which takes one argument, the type of action/message that will get passed to the `update` function along with the `model`.
+
+```
+import Html.Events exposing (onInput)
+
+...
+
+      input [onInput Greet] []
+
+```
+
+This will call `update` with a `Greet` type message together with the `String` in the input box. We now need to define this as a type of message that gets passed into update:
+
+```
+type Message = Greet String
+```
+
+We could have placed this anywhere  in the program but it is quite better to put this near our `update` function, as a definition of what tyeps of messages `update` will respond to.

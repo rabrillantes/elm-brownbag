@@ -1,4 +1,5 @@
 import Html.App exposing (beginnerProgram)
+import Html.Events exposing (onInput)
 import Html exposing (div, input, text)
 
 --MODEL
@@ -10,13 +11,16 @@ view model =
   div [] [
     text model,
     div [] [
-      input [] []
+      input [onInput Greet] []
     ]
   ]
 
 --UPDATE
+type Message = Greet String
 update msg model =
-  model
+  case msg of
+    Greet name ->
+      "Hello, " ++ name ++ "!"
 
 main =
   beginnerProgram {model = model, view = view, update = update}
