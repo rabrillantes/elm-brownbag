@@ -20,7 +20,9 @@ type Message = Greet String
 update msg model =
   case msg of
     Greet name ->
-      "Hello, " ++ name ++ "!"
+      case name of
+        "" -> "Hello, World!"
+        _  -> "Hello, " ++ name ++ "!"
 
 main =
   beginnerProgram {model = model, view = view, update = update}

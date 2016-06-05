@@ -161,3 +161,12 @@ To breakdown what is happening here:
 - the other argument is bound to the variable `name`
 - which we then concatenate (`++`) to our greeting "Hello"
 - the concatenated `String` is returned, and used as the new `model`
+
+Trying it out on the reactor, we seem to have a bug. When we erase the text in our input we don't reset the greeting back to "Hello, World!". We can fix this with another pattern match:
+
+```
+    Greet name ->
+      case name of
+        "" -> "Hello, World!"
+        _  -> "Hello, " ++ name ++ "!"
+```
