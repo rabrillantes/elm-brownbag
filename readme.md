@@ -122,3 +122,5 @@ view model =
     ]
   ]
 ```
+
+`div` and `input` are also functions which take two arguments: a list of attributes and a list of nodes that they contain. We nest them similar to how we would nest html tags. I must say it translates really well as a HTML Domain Specific Language.
